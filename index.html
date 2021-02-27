@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullpage JS Concept</title>
+    <meta name="theme-color" content="#042933" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/fullpage.min.css"
+    />
+  </head>
+
+  <body class="antialiased">
+    <div id="fullpage">
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-blue-bg text-fullpage-blue-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-green1-bg text-fullpage-green1-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-red1-bg text-fullpage-red1-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-purple1-bg text-fullpage-purple1-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-yellow-bg text-fullpage-yellow-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-red2-bg text-fullpage-red2-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-green2-bg text-fullpage-green2-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-purple2-bg text-fullpage-purple2-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+      <section
+        class="section py-6 px-10 flex flex-col bg-fullpage-red3-bg text-fullpage-red3-fg"
+      >
+        <div class="w-full"></div>
+        <h2 class="text-4xl mt-3">Title</h2>
+        <p class="text-lg mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+          adipisci asperiores nihil earum quia eos commodi distinctio ipsam
+          voluptatum, sequi ipsum quidem unde magni est saepe ullam qui harum
+          hic.
+        </p>
+      </section>
+    </div>
+
+    <script type="text/javascript" src="assets/js/fullpage.min.js"></script>
+    <script>
+      new fullpage("#fullpage", {
+        //options here
+        autoScrolling: true,
+        lockAnchors: true,
+
+        anchors: [
+          "#042933",
+          "#043326",
+          "#330B04",
+          "#330422",
+          "#332304",
+          "#330415",
+          "#043309",
+          "#180433",
+          "#330406",
+        ],
+
+        onLeave: function (origin, destination, direction) {
+          let leavingSection = this;
+          let defaultThemeColor = "#042933";
+          let themeColor = defaultThemeColor;
+
+          if (direction == "up") {
+            themeColor = destination.anchor;
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", themeColor);
+          }
+        },
+        
+        afterLoad: function(origin, destination, direction) {
+          let loadedSection = this;
+          let defaultThemeColor = "#042933";
+          let themeColor = defaultThemeColor;
+
+          if (direction == "down") {
+            themeColor = destination.anchor;
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", themeColor);
+          }
+       },
+      });
+
+      //methods
+      fullpage_api.setAllowScrolling(true);
+    </script>
+  </body>
+</html>
